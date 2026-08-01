@@ -118,7 +118,7 @@ section{position:relative;z-index:2}
 .pw{position:relative;aspect-ratio:3/4;max-width:420px;cursor:none;perspective:600px}
 .pi{width:100%;height:100%;border-radius:4px;overflow:hidden;transform-style:preserve-3d;will-change:transform}
 .pph{width:100%;height:100%;background:linear-gradient(135deg,rgba(201,169,110,.12),rgba(201,169,110,.03));border:1px solid var(--bs);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.8rem;color:var(--mu);font-family:var(--fm);font-size:.7rem;letter-spacing:.1em;border-radius:4px}
-.pimg{width:100%;height:100%;object-fit:cover;object-position:top;filter:grayscale(15%) brightness(.9);transform:scale(1.08);will-change:transform;transition:filter .7s}
+.pimg{width:100%;height:100%;object-fit:cover;object-position:center 15%;filter:grayscale(15%) brightness(.9);transform:scale(1);will-change:transform;transition:filter .7s}
 .pw:hover .pimg{filter:grayscale(0%) brightness(1)}
 .pfr{position:absolute;top:1.5rem;left:1.5rem;right:-1.5rem;bottom:-1.5rem;border:1px solid var(--b);border-radius:4px;pointer-events:none;will-change:transform}
 .pbdg{position:absolute;bottom:2rem;right:-3.5rem;background:var(--ink);border:1px solid var(--bs);padding:1rem 1.4rem;border-radius:2px;z-index:2;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);will-change:transform}
@@ -135,7 +135,7 @@ section{position:relative;z-index:2}
 /* WORKS */
 #works{padding:9rem 5vw}
 .wgr{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--b);margin-top:4rem}
-.wc{background:var(--ink);position:relative;overflow:hidden;cursor:none;aspect-ratio:16/10;display:flex;flex-direction:column;justify-content:flex-end;padding:2.2rem}
+.wc{background:var(--ink);position:relative;overflow:hidden;cursor:none;aspect-ratio:16/10;display:flex;flex-direction:column;justify-content:flex-end;padding:2.2rem;text-decoration:none;color:inherit}
 .wc:first-child{grid-column:span 2;aspect-ratio:21/9}
 .wcb{position:absolute;inset:0;filter:brightness(.28) saturate(.4);transform:scale(1.07);transition:transform .9s var(--ex),filter .7s}
 .wc:nth-child(1) .wcb{background:linear-gradient(135deg,#0c2418,#050f0a 55%,#060606)}
@@ -333,15 +333,15 @@ footer{border-top:1px solid var(--b);padding:2rem 5vw;display:flex;justify-conte
   <div class="slbl rv"><span data-en="02 — Selected Works" data-fr="02 — Projets sélectionnés">02 — Selected Works</span></div>
   <h2 class="stit rv d1 ba"><em data-en="Projects that" data-fr="Projets qui">Projects that</em><br><span data-en="speak for themselves" data-fr="parlent d'eux-mêmes">speak for themselves</span></h2>
   <div class="wgr">
-    <div class="wc"><div class="wcb"></div><div class="wcgl"></div><div class="war"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
+    <a class="wc" href="https://github.com/victoria-ngoussi/explore-gabon" target="_blank" rel="noopener noreferrer"><div class="wcb"></div><div class="wcgl"></div><div class="war"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
       <div class="wcc"><span class="wcn">01 · Featured · 2025</span><h3 class="wct">Explore Gabon</h3><p class="wcd" data-en="A digital platform celebrating Gabon's tourism, culture and biodiversity. Full stack with AI-powered recommendations." data-fr="Plateforme digitale sur le tourisme et la culture du Gabon. Full stack avec recommandations IA.">A digital platform celebrating Gabon's tourism, culture and biodiversity. Full stack with AI-powered recommendations.</p><div class="wctg"><span class="wtg">React</span><span class="wtg">Node.js</span><span class="wtg">MongoDB</span><span class="wtg">AI Reco</span><span class="wtg">REST API</span></div></div>
-    </div>
-    <div class="wc"><div class="wcb"></div><div class="wcgl"></div><div class="war"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
-      <div class="wcc"><span class="wcn">02 · 2024–2025</span><h3 class="wct" data-en="Android Apps" data-fr="Apps Android">Android Apps</h3><p class="wcd" data-en="Native Android apps — intuitive UI, local database, smooth performance." data-fr="Applications Android natives — UI intuitive, base de données locale, performances fluides.">Native Android apps — intuitive UI, local database, smooth performance.</p><div class="wctg"><span class="wtg">Android Studio</span><span class="wtg">Java</span><span class="wtg">SQLite</span><span class="wtg">UI/UX</span></div></div>
-    </div>
-    <div class="wc"><div class="wcb"></div><div class="wcgl"></div><div class="war"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
-      <div class="wcc"><span class="wcn">03 · 2023–2025</span><h3 class="wct" data-en="Dynamic Web Platforms" data-fr="Plateformes Web Dynamiques">Dynamic Web Platforms</h3><p class="wcd" data-en="Responsive web projects with HTML, CSS, JavaScript, PHP, Python and MySQL." data-fr="Projets web responsives avec HTML, CSS, JavaScript, PHP, Python et MySQL.">Responsive web projects with HTML, CSS, JavaScript, PHP, Python and MySQL.</p><div class="wctg"><span class="wtg">HTML/CSS</span><span class="wtg">JavaScript</span><span class="wtg">PHP</span><span class="wtg">Python</span><span class="wtg">MySQL</span></div></div>
-    </div>
+    </a>
+    <a class="wc" href="https://github.com/victoria-ngoussi/Ui-Kit-Africa" target="_blank" rel="noopener noreferrer"><div class="wcb"></div><div class="wcgl"></div><div class="war"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
+      <div class="wcc"><span class="wcn">02 · 2024–2025</span><h3 class="wct" data-en="UI Kit Africa" data-fr="UI Kit Africa">UI Kit Africa</h3><p class="wcd" data-en="A design system prototype inspired by African cultures — Gabon, Ghana, Côte d'Ivoire, Bénin, Congo, Angola." data-fr="Prototype de design system inspiré des cultures africaines — Gabon, Ghana, Côte d'Ivoire, Bénin, Congo, Angola.">A design system prototype inspired by African cultures — Gabon, Ghana, Côte d'Ivoire, Bénin, Congo, Angola.</p><div class="wctg"><span class="wtg">HTML/CSS</span><span class="wtg">Design System</span><span class="wtg">UI/UX</span></div></div>
+    </a>
+    <a class="wc" href="https://devs-solutions.tech/" target="_blank" rel="noopener noreferrer"><div class="wcb"></div><div class="wcgl"></div><div class="war"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg></div>
+      <div class="wcc"><span class="wcn">03 · 2025</span><h3 class="wct">DevS-Solutions</h3><p class="wcd" data-en="A collaborative digital agency platform — custom web & mobile development, IT maintenance, and AI-powered automation." data-fr="Plateforme collaborative d'agence digitale — développement web & mobile sur-mesure, maintenance IT et automatisation IA.">A collaborative digital agency platform — custom web & mobile development, IT maintenance, and AI-powered automation.</p><div class="wctg"><span class="wtg">React</span><span class="wtg">Laravel</span><span class="wtg">IA & Chatbots</span><span class="wtg">Maintenance IT</span></div></div>
+    </a>
   </div>
   <div style="display:flex;justify-content:center;margin-top:3rem" class="rv">
     <a href="#contact" class="btno mag" data-en="Start a project →" data-fr="Démarrer un projet →">Start a project →</a>
@@ -485,7 +485,7 @@ function scrambleTo(t){if(scTm)clearInterval(scTm);var it=0;scTm=setInterval(fun
 (function(){
   var pw=document.getElementById('pw'),pi=document.getElementById('pi'),pfr=document.getElementById('pfr'),pbdg=document.getElementById('pbdg'),pimg=document.querySelector('.pimg');
   if(!pw)return;
-  var tX=0,tY=0,pX=0,pY=0,pZ=1,cTX=0,cTY=0,cPX=0,cPY=0,cPZ=1.08;
+  var tX=0,tY=0,pX=0,pY=0,pZ=1,cTX=0,cTY=0,cPX=0,cPY=0,cPZ=1;
   pw.addEventListener('mousemove',function(e){var r=pw.getBoundingClientRect(),nx=(e.clientX-r.left)/r.width-.5,ny=(e.clientY-r.top)/r.height-.5;tX=nx*28;tY=ny*22;pX=nx*16;pY=ny*12;pZ=1.06;});
   pw.addEventListener('mouseleave',function(){tX=0;tY=0;pX=0;pY=0;pZ=1;});
   (function aP(){cTX+=(tX-cTX)*.08;cTY+=(tY-cTY)*.08;cPX+=(pX-cPX)*.08;cPY+=(pY-cPY)*.08;cPZ+=(pZ-cPZ)*.08;
