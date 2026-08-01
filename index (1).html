@@ -213,13 +213,26 @@ footer{border-top:1px solid var(--b);padding:2rem 5vw;display:flex;justify-conte
 .mag{display:inline-block}
 
 /* RESPONSIVE */
+.hbg{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:.5rem;z-index:200}
+.hbg span{display:block;width:22px;height:1px;background:var(--cream);transition:transform .3s ease,opacity .3s ease}
+body.mopen .hbg span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+body.mopen .hbg span:nth-child(2){opacity:0}
+body.mopen .hbg span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.mmenu{position:fixed;inset:0;z-index:150;background:rgba(6,6,6,.98);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.2rem;opacity:0;pointer-events:none;transition:opacity .4s ease}
+body.mopen .mmenu{opacity:1;pointer-events:auto}
+.mmenu a{font-family:var(--fd);font-size:1.9rem;font-weight:300;color:var(--cream);text-decoration:none;letter-spacing:.02em}
+.mmenu a.ncta{color:var(--g)!important;font-family:var(--fm);font-size:.85rem;letter-spacing:.1em;border:1px solid var(--bs);padding:.75rem 1.7rem;border-radius:2px;text-transform:uppercase}
+.mmlang{display:flex;gap:.8rem;margin-top:.5rem}
+.mmlang .lb{width:38px;height:38px}
 @media(max-width:900px){
   nav{padding:1.2rem 1.5rem}.navr{display:none}
   #lsw{display:none}
+  .hbg{display:flex}
   #hero{padding:0 1.5rem 3.5rem}
   #about{grid-template-columns:1fr;padding:5rem 1.5rem;gap:3rem}
   .pw{max-width:100%}.pbdg{right:1rem}
   #works{padding:5rem 1.5rem}.wgr{grid-template-columns:1fr}.wc:first-child{grid-column:span 1;aspect-ratio:16/10}
+  .war{opacity:1;transform:translate(0,0)}
   #skills{padding:5rem 1.5rem}.skl{grid-template-columns:1fr;gap:3rem}.sklft{position:static}
   #contact{padding:5rem 1.5rem}
   footer{padding:1.5rem;flex-direction:column;gap:.6rem;text-align:center}
@@ -254,7 +267,20 @@ footer{border-top:1px solid var(--b);padding:2rem 5vw;display:flex;justify-conte
     <li><a href="#contact" data-en="Contact" data-fr="Contact">Contact</a></li>
     <li><a href="CV_Victoria_Ngoussi.pdf" download class="ncta">↓ CV</a></li>
   </ul>
+  <button class="hbg" id="hbg" aria-label="Menu" onclick="toggleMenu()"><span></span><span></span><span></span></button>
 </nav>
+
+<div class="mmenu" id="mmenu">
+  <a href="#about" data-en="About" data-fr="À propos" onclick="closeMenu()">About</a>
+  <a href="#works" data-en="Works" data-fr="Projets" onclick="closeMenu()">Works</a>
+  <a href="#skills" data-en="Stack" data-fr="Stack" onclick="closeMenu()">Stack</a>
+  <a href="#contact" data-en="Contact" data-fr="Contact" onclick="closeMenu()">Contact</a>
+  <a href="CV_Victoria_Ngoussi.pdf" download class="ncta">↓ CV</a>
+  <div class="mmlang">
+    <button class="lb on" onclick="setLang('en')">EN</button>
+    <button class="lb" onclick="setLang('fr')">FR</button>
+  </div>
+</div>
 
 <section id="hero">
   <canvas id="hcv"></canvas>
@@ -529,6 +555,10 @@ document.querySelectorAll('.mag').forEach(function(btn){
   btn.addEventListener('mouseleave',function(){tx=0;ty=0;});
   (function aB(){bx+=(tx-bx)*.15;by+=(ty-by)*.15;btn.style.transform='translate('+bx+'px,'+by+'px)';requestAnimationFrame(aB);})();
 });
+
+/* ═══ MOBILE MENU ═══ */
+function toggleMenu(){document.body.classList.toggle('mopen');}
+function closeMenu(){document.body.classList.remove('mopen');}
 
 /* ═══ LANG ═══ */
 function setLang(lang){
